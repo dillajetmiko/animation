@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: green;
+}
+.loader {
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.loader .a {
+width: 80px;
+height: 80px;
+border: 7px solid white;
+transform: rotate(45deg);
+border-radius: 0 50% 50% 50%;
+position: relative;
+animation: move 0.5s linear infinite alternate-reverse;
+}
+.loader .a::before {
+content: '';
+position: absolute;
+height: 55%;
+width: 50%;
+border-radius: 50%;
+border: 7px solid transparent;
+border-top-color: white;
+border-bottom-color: white;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+to{
+transform: translate(-50%,-50%)
+rotate(360deg);
+}
+}
+@keyframes move{
+to{
+transform: translateY(15px)
+rotate(45deg);
+}
+}
+
+</style>
+</head>
+<body>
+
+<section class="loader">
+<div class="a">
+
+```
+</div>
+
+```
+
+</section>
+<br>
+
+</body>
+</html>
